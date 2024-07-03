@@ -1,24 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
-
+import PricePredictionForm from './components/PricePredictionForm';
+import Navbar from './components/Navbar';
+import { ToastContainer,toast } from 'react-toastify';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Navbar />
+    <div className="bg-light min-vh-100 d-flex align-items-center">
+      <div className="container">
+        <PricePredictionForm toast={toast} />
+      </div>
     </div>
+    <ToastContainer autoClose={1000} position='top-right' />
+  </div>
   );
 }
 
